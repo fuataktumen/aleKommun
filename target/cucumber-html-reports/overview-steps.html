@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>17 May 2020, 01:54</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepdefinitions.Hooks.setuP()</td>
+              <td>21</td>
+              <td class="duration" data-value="5845366423">5.845</td>
+              <td class="duration" data-value="5845366423">7.429</td>
+              <td class="duration" data-value="122752694900">2:2.752</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>21</td>
+              <td class="duration" data-value="1050474028">1.050</td>
+              <td class="duration" data-value="1050474028">1.593</td>
+              <td class="duration" data-value="22059954600">22.059</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HyraLokalStepDef.the_user_should_be_able_to_be_main_page_of_www_glasbruksmuseet_se()</td>
+              <td>1</td>
+              <td class="duration" data-value="24905199800">24.905</td>
+              <td class="duration" data-value="24905199800">24.905</td>
+              <td class="duration" data-value="24905199800">24.905</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HyraLokalStepDef.the_user_should_be_able_to_click_Hyra_Lokal_under_Boka_Hyr_module()</td>
+              <td>1</td>
+              <td class="duration" data-value="19990199400">19.990</td>
+              <td class="duration" data-value="19990199400">19.990</td>
+              <td class="duration" data-value="19990199400">19.990</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HyraLokalStepDef.the_user_should_be_able_to_select_one_option_under_the_V&auml;lj_lokal_att_hyra()</td>
+              <td>1</td>
+              <td class="duration" data-value="501791500">0.501</td>
+              <td class="duration" data-value="501791500">0.501</td>
+              <td class="duration" data-value="501791500">0.501</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HyraLokalStepDef.the_user_should_be_able_to_select_the_date_of_reservation()</td>
+              <td>1</td>
+              <td class="duration" data-value="524552900">0.524</td>
+              <td class="duration" data-value="524552900">0.524</td>
+              <td class="duration" data-value="524552900">0.524</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HyraLokalStepDef.the_user_should_click_SK&#304;CKA()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HyraLokalStepDef.the_user_should_click_skapaF&ouml;rfrogan()</td>
+              <td>1</td>
+              <td class="duration" data-value="7816007000">7.816</td>
+              <td class="duration" data-value="7816007000">7.816</td>
+              <td class="duration" data-value="7816007000">7.816</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HyraLokalStepDef.the_user_should_fill_required_blanks()</td>
+              <td>1</td>
+              <td class="duration" data-value="10174568800">10.174</td>
+              <td class="duration" data-value="10174568800">10.174</td>
+              <td class="duration" data-value="10174568800">10.174</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.UpplevAleStepDef.the_user_should_be_able_to_click_Glasbruksmuseet_i_Surte_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1702291900">1.702</td>
+              <td class="duration" data-value="1702291900">1.702</td>
+              <td class="duration" data-value="1702291900">1.702</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.UpplevAleStepDef.the_user_should_be_able_to_click_module(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1604407400">1.604</td>
+              <td class="duration" data-value="1604407400">1.604</td>
+              <td class="duration" data-value="1604407400">1.604</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.UpplevAleStepDef.the_user_should_be_able_to_click_www_glasbruksmuseet_se_on_the_webpage()</td>
+              <td>1</td>
+              <td class="duration" data-value="17916909200">17.916</td>
+              <td class="duration" data-value="17916909200">17.916</td>
+              <td class="duration" data-value="17916909200">17.916</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_Ans&ouml;kellers&auml;guppplats_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1634766300">1.634</td>
+              <td class="duration" data-value="1634766300">1.634</td>
+              <td class="duration" data-value="1634766300">1.634</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_Avgifter_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1500729900">1.500</td>
+              <td class="duration" data-value="1500729900">1.500</td>
+              <td class="duration" data-value="1500729900">1.500</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_Avgiftsfriallm&auml;nf&ouml;rskola_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1419146200">1.419</td>
+              <td class="duration" data-value="1419146200">1.419</td>
+              <td class="duration" data-value="1419146200">1.419</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_Barnibehovavs&auml;rskiltst&ouml;d_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1518072500">1.518</td>
+              <td class="duration" data-value="1518072500">1.518</td>
+              <td class="duration" data-value="1518072500">1.518</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_Familjedaghemdagbarnv&aring;rdare_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1306005800">1.306</td>
+              <td class="duration" data-value="1306005800">1.306</td>
+              <td class="duration" data-value="1306005800">1.306</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_Fritidshem_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1583711800">1.583</td>
+              <td class="duration" data-value="1583711800">1.583</td>
+              <td class="duration" data-value="1583711800">1.583</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_J&auml;mf&ouml;rf&ouml;rskolor_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="3016171300">3.016</td>
+              <td class="duration" data-value="3016171300">3.016</td>
+              <td class="duration" data-value="3016171300">3.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_Mobbningochkr&auml;nkandebehandling_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1623992700">1.623</td>
+              <td class="duration" data-value="1623992700">1.623</td>
+              <td class="duration" data-value="1623992700">1.623</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_Nyf&ouml;rskolaiNol_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1808393100">1.808</td>
+              <td class="duration" data-value="1808393100">1.808</td>
+              <td class="duration" data-value="1808393100">1.808</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_Nyf&ouml;rskolai&Auml;lv&auml;ngen_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="2275730800">2.275</td>
+              <td class="duration" data-value="2275730800">2.275</td>
+              <td class="duration" data-value="2275730800">2.275</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_alesF&ouml;rskolar_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1746285700">1.746</td>
+              <td class="duration" data-value="1746285700">1.746</td>
+              <td class="duration" data-value="1746285700">1.746</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_&Ouml;ppettider_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1498802200">1.498</td>
+              <td class="duration" data-value="1498802200">1.498</td>
+              <td class="duration" data-value="1498802200">1.498</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.f&ouml;rskolaOchBarnomsorgStepDef.the_user_should_click_&Ouml;ppnaf&ouml;rskolan_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="1575030700">1.575</td>
+              <td class="duration" data-value="1575030700">1.575</td>
+              <td class="duration" data-value="1575030700">1.575</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.startsidaUtbilBarnStepDef.the_user_should_be_on_mainpage_as_an_user()</td>
+              <td>20</td>
+              <td class="duration" data-value="3006223110">3.006</td>
+              <td class="duration" data-value="3006223110">3.984</td>
+              <td class="duration" data-value="60124462200">1:0.124</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.startsidaUtbilBarnStepDef.the_user_should_click_F&ouml;rskolaochbarnomsorg_option_on_the_webpage()</td>
+              <td>14</td>
+              <td class="duration" data-value="1272530128">1.272</td>
+              <td class="duration" data-value="1272530128">1.707</td>
+              <td class="duration" data-value="17815421800">17.815</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.startsidaUtbilBarnStepDef.the_user_should_click_Grundskola_grunds&auml;rskola_option_on_the_webpage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1750283700">1.750</td>
+              <td class="duration" data-value="1750283700">1.750</td>
+              <td class="duration" data-value="1750283700">1.750</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.startsidaUtbilBarnStepDef.the_user_should_click_Gymnasium_option_on_the_webpage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1978066700">1.978</td>
+              <td class="duration" data-value="1978066700">1.978</td>
+              <td class="duration" data-value="1978066700">1.978</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.startsidaUtbilBarnStepDef.the_user_should_click_Komvux_option_on_the_webpage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1933674000">1.933</td>
+              <td class="duration" data-value="1933674000">1.933</td>
+              <td class="duration" data-value="1933674000">1.933</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.startsidaUtbilBarnStepDef.the_user_should_click_Kulturskola_option_on_the_webpage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1784405800">1.784</td>
+              <td class="duration" data-value="1784405800">1.784</td>
+              <td class="duration" data-value="1784405800">1.784</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.startsidaUtbilBarnStepDef.the_user_should_click_V&auml;lkomsten_f&ouml;r_dig_som_&auml;r_nyanl&auml;nd_option_on_the_webpage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1634976800">1.634</td>
+              <td class="duration" data-value="1634976800">1.634</td>
+              <td class="duration" data-value="1634976800">1.634</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.startsidaUtbilBarnStepDef.the_user_should_click_module_and_submodule(java.lang.String,java.lang.String)</td>
+              <td>19</td>
+              <td class="duration" data-value="2860131678">2.860</td>
+              <td class="duration" data-value="2860131678">3.621</td>
+              <td class="duration" data-value="54342501900">54.342</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>33</td>
+            <td>123</td>
+            <td class="duration">3.201</td>
+            <td class="duration">2:2.752</td>
+            <td class="duration">6:33.819</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
