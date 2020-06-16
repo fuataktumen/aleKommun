@@ -20,10 +20,10 @@ public class UpplevAlePage extends BasePage{
     @FindBy(xpath = "//div[@class='navigation']/ul/li[3]")
     public WebElement FågeldammarnaSurte;
 
-    @FindBy(xpath = "//div[@class='navigation']/ul/li[4]")
+    @FindBy(id = "svid10_78d41a6515983dfe8433bd89")
     public WebElement GlasbruksmuseetiSurte;
 
-    @FindBy(css = "a[href='http://www.glasbruksmuseet.se']")
+    @FindBy(css = "a[href='http://www.glasbruksmuseet.se/']")
     public WebElement GlasbruksmuseetiSurteNewePage;
 
 

@@ -30,6 +30,8 @@ public class HyraLokalStepDef {
 
         upplevAlePage.GlasbruksmuseetiSurte.click();
 
+        BrowserUtils.waitFor(5);
+
         upplevAlePage.GlasbruksmuseetiSurteNewePage.click();
         String currentWindowHandle = Driver.get().getWindowHandle();
 
